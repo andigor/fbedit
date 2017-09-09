@@ -1,0 +1,10 @@
+# vi: ft=make
+
+
+CUR_CUR_DIR:=$(CURDIR)   #exported
+
+$(CUR_CUR_DIR).EXES := compilability
+
+compilability.SRC := 01.cpp
+
+
