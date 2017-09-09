@@ -1,0 +1,12 @@
+# vi: ft=make
+#
+CUR_CUR_DIR:=$(CURDIR)   #exported
+
+$(warning from proj $(CUR_CUR_DIR))
+
+$(CUR_CUR_DIR).EXES := empty1 empty2
+
+empty1.SRC := empty.cpp main.cpp
+
+empty2.SRC := empty.cpp main.cpp
+
