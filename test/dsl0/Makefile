@@ -1,7 +1,8 @@
 all: run
 
+# compilability
 
-PRJD:=fbedit/test-dsl-output
+PRJD:=fbedit/test/dsl0/
 STD:=-std=c++1z
 PREFIX:=0
 DKRI:=gcc #docker image
