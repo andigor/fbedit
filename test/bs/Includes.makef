@@ -1,5 +1,7 @@
 # vi: ft=make
 #
+# project includes a file from common include directory -> binary is 
+# produced after complation
 
 $(CURDIR).EXES := incs
 

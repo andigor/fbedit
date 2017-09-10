@@ -1,5 +1,8 @@
 # vi: ft=make
 #
+# two projects of the same files -> two binaries are produced
+# after compilation
+
 $(CURDIR).EXES := empty1 empty2 
 
 empty1.SRC := empty.cpp main.cpp
