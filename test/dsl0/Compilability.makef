@@ -5,6 +5,7 @@ CUR_CUR_DIR:=$(CURDIR)   #exported
 
 $(CUR_CUR_DIR).EXES := compilability
 
-compilability.SRC := 01.cpp
+compilability.SRC := 02-declare-vars-of-basic-types-compilation-success.cpp \
+	                   compilability_main.cpp 
 
 
