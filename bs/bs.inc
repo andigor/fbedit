@@ -1,6 +1,7 @@
 # vi: ft=make 
 
-MAKEFLAGS += --no-builtin-rules .SUFFIXES:
+MAKEFLAGS += --no-builtin-rules 
+.SUFFIXES:
 
 STD:=-std=c++1z
 DKRI:=gcc #docker image
@@ -12,18 +13,15 @@ all:
 makefiles_ := $(wildcard *.makef)
 
 $(warning makefiles found: $(makefiles_))
+$(warning bs.inc pwd: $(CURDIR))
 
 files_to_clean_ := 
 $(foreach mf_,$(makefiles_),\
 	$(eval include $(mf_))\
-	$(warning EXES: $($(CUR_CUR_DIR).EXES))\
-	$(foreach exe_,$($(CUR_CUR_DIR).EXES),\
-	  $(warning SRC: $($(exe_).SRC))\
+	$(foreach exe_,$($(CURDIR).EXES),\
 		$(eval obj_ := )\
 		$(foreach src_,$($(exe_).SRC),\
-	    $(warning src_: $(src_))\
 		  $(eval base_name_ := $(basename $(src_)))\
-		  $(warning base name: $(base_name_))\
 			$(eval target_obj_ := $(exe_)_$(base_name_).o)\
 	    $(eval $(target_obj_): $(src_) ; $(COMPILER) -c -o $$@ $$<)\
 			$(eval all: $(target_obj_))\
@@ -36,5 +34,5 @@ $(foreach mf_,$(makefiles_),\
 )
 
 clean:
-	rm $(files_to_clean_)
+	rm -f $(files_to_clean_)
 

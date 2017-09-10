@@ -1,10 +1,10 @@
 # vi: ft=make
 #
-CUR_CUR_DIR:=$(CURDIR)   #exported
-
-$(CUR_CUR_DIR).EXES := empty1 empty2
+$(CURDIR).EXES := empty1 empty2 incs
 
 empty1.SRC := empty.cpp main.cpp
 
 empty2.SRC := empty.cpp main.cpp
+
+incs.SRC := includes.cpp main.cpp
 
