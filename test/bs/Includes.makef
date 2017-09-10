@@ -1,0 +1,7 @@
+# vi: ft=make
+#
+
+$(CURDIR).EXES := incs
+
+incs.SRC := includes.cpp main.cpp
+

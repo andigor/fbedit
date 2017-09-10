@@ -1,10 +1,9 @@
 # vi: ft=make
 #
-$(CURDIR).EXES := empty1 empty2 incs
+$(CURDIR).EXES := empty1 empty2 
 
 empty1.SRC := empty.cpp main.cpp
 
 empty2.SRC := empty.cpp main.cpp
 
-incs.SRC := includes.cpp main.cpp
 
