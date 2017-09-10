@@ -31,6 +31,8 @@ $(foreach mf_,$(makefiles_),\
 		$(eval all: $(exe_))\
 		$(eval files_to_clean_ += $(obj_) $(exe_))\
 	)\
+	$(eval $(CURDIR).EXES := )\
+	$(eval $(exe_).SRC := )\
 )
 
 clean:
